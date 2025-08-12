@@ -1,1 +1,49 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jogo da Memória</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Tela inicial para nome -->
+  <div id="startScreen" class="overlay">
+    <div class="start-content">
+      <h1>Bem-vindo ao Jogo da Memória</h1>
+      <input id="playerName" type="text" placeholder="Digite seu nome" />
+      <select id="difficultySelect">
+        <option value="easy">Fácil (4x4)</option>
+        <option value="medium" selected>Médio (6x6)</option>
+        <option value="hard">Difícil (8x8)</option>
+      </select>
+      <button id="startBtn">Começar</button>
+    </div>
+  </div>
+
+  <!-- Mensagem de status -->
+  <p id="message"></p>
+
+  <!-- Tabuleiro do jogo -->
+  <div id="gameBoard"></div>
+
+  <!-- Tela de vitória -->
+  <div id="winScreen" class="overlay hidden">
+    <div class="start-content">
+      <h1>Parabéns, <span id="winnerName"></span>!</h1>
+      <p>Você venceu com <span id="finalScore"></span> pontos!</p>
+      <button id="restartBtn">Jogar Novamente</button>
+    </div>
+  </div>
+
+  <!-- Ranking -->
+  <div id="ranking" class="ranking-container">
+    <h2>Top 5 Pontuações</h2>
+    <ol id="highscoreList"></ol>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
