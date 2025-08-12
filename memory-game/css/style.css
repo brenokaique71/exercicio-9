@@ -1,1 +1,143 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #1e1e2f;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+#message {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  height: 1.5em;
+}
+
+#gameBoard {
+  display: grid;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Cartas */
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #2f2f4f;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 0 8px #0008;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  transition: transform 0.3s;
+  overflow: hidden;
+}
+
+.card img {
+  width: 80px;
+  height: 80px;
+  display: none;
+  pointer-events: none;
+  border-radius: 6px;
+}
+
+.card.flipped, .card.matched {
+  background-color: #90caf9;
+  transform: rotateY(180deg);
+  cursor: default;
+}
+
+.card.flipped img, .card.matched img {
+  display: block;
+}
+
+.card.matched {
+  background-color: #4caf50;
+  box-shadow: 0 0 15px #4caf50aa;
+  cursor: default;
+}
+
+/* Tela inicial e de vitória */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 30, 47, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.start-content {
+  background: #2a2a4f;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 15px #0008;
+}
+
+.start-content input, select {
+  padding: 10px;
+  font-size: 1rem;
+  margin: 10px 0;
+  width: 200px;
+  border-radius: 6px;
+  border: none;
+}
+
+.start-content button {
+  padding: 10px 25px;
+  background-color: #2196f3;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.start-content button:hover {
+  background-color: #1976d2;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Ranking */
+.ranking-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: #2a2a4fcc;
+  padding: 15px 20px;
+  border-radius: 8px;
+  width: 180px;
+  font-size: 1rem;
+  max-height: 300px;
+  overflow-y: auto;
+  user-select: none;
+}
+
+.ranking-container h2 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.ranking-container ol {
+  padding-left: 20px;
+}
