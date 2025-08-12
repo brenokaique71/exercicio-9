@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flappy Bird da Shopee</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="background"></div>
 
+  <img class="bird" src="img/bird.png" alt="Pássaro" />
+
+  <div class="message">
+    Pressione Enter para começar
+  </div>
+
+  <div class="score">
+    <span class="score_title"></span>
+    <span class="score_val"></span>
+  </div>
+
+  <div class="difficulty-select">
+    <label for="difficulty">Selecione a dificuldade:</label>
+    <select id="difficulty">
+      <option value="easy">Fácil</option>
+      <option value="normal" selected>Normal</option>
+      <option value="hard">Difícil</option>
+    </select>
+  </div>
+
+  <div class="highscores">
+    <h3>Top 5 Pontuações</h3>
+    <ol id="highscoreList"></ol>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
